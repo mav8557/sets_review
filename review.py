@@ -17,11 +17,7 @@ def english_count(datafile, words):
 
     count = 0
 
-    with open(datafile) as fd:
-        for line in fd:
-            for word in line.split():
-                if word.lower() in words:
-                    count += 1
+    # TODO: get count of english words
     
     return count
 
@@ -38,34 +34,16 @@ def get_words(wordsfile):
 
     """
     words = []
-    with open(wordsfile) as fd:
-        for line in fd:
-            words.append(line.strip())
-    return words
 
+    # TODO: return list of words from file
 
-def get_words_set(wordsfile):
-    """
-    Open a file of newline-separated
-    english words, and return a list of
-    those words
-
-    abc
-    abcde      =>     [abc, abcde, apple]
-    apple
-
-    """
-    words = set()
-    with open(wordsfile) as fd:
-        for line in fd:
-            words.add(line.strip())
     return words
 
 
 def main():
     
     # get words to check against
-    words = get_words_set(ENGLISH_WORDS)
+    words = get_words(ENGLISH_WORDS)
     
     # get time taken
     start = time.time()
