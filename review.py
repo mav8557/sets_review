@@ -40,7 +40,7 @@ def get_words(wordsfile):
     words = []
     with open(wordsfile) as fd:
         for line in fd:
-            words.append(line.strip())
+            words.append(line.strip().lower())
     return words
 
 
