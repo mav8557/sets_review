@@ -58,7 +58,7 @@ def get_words_set(wordsfile):
     words = set()
     with open(wordsfile) as fd:
         for line in fd:
-            words.add(line.strip())
+            words.add(line.strip().lower())
     return words
 
 
